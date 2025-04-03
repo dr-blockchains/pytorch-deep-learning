@@ -136,7 +136,7 @@ class LinearHiddenNN(nn.Module):
     def forward(self, x):
         return self.model(x)
 
-linear_hidden = LinearHiddenNN(n_inputs, 5, n_outputs)
+linear_hidden = LinearHiddenNN(n_inputs, 3, n_outputs)
 print(f"Number of parameters: {num_param(linear_hidden)}")
 linear_hidden
 
