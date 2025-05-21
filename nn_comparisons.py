@@ -294,6 +294,7 @@ plt.show()
 # Plots for the losses:
 
 plt.figure(figsize=(15, 10))
+maxN = len(relu_hidden)
 
 plt.plot(simple_losses, label='Simple NN', color='b')
 plt.plot(linear_hidden_losses, label='Linear Hidden', color='g')
@@ -301,7 +302,7 @@ plt.plot(relu_hidden_losses[0], label=f'One ReLU Hidden {1}', color=colors[0])
 plt.plot(relu_hidden_losses[1], label=f'One ReLU Hidden {2}', color=colors[1])
 plt.plot(relu_hidden_losses[2], label=f'One ReLU Hidden {3}', color=colors[2])
 plt.plot(relu_hidden_losses[15], label=f'One ReLU Hidden {16}', color='r')
-plt.plot(relu_hidden_losses[29], label=f'One ReLU Hidden {30}', color=colors[29])
+plt.plot(relu_hidden_losses[maxN-1], label=f'One ReLU Hidden {maxN}', color=colors[maxN-1])
 plt.plot(two_hidden_losses, label='Two ReLU Hidden', color='m')
 
 plt.xlabel('Epoch')
